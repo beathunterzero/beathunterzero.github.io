@@ -1,76 +1,194 @@
-# Portfolio
-![OscarHernandez-portfolio](https://github.com/user-attachments/assets/e284a42b-15c5-495c-99c7-ad5c1eb3bbe7)
-![Deploy Status](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)
+Claro. Aquí tienes el README en inglés, adaptado a tu portafolio y manteniendo créditos/licencia de forma limpia:
+
+````md
+# Rhodyn Ildefonso Portfolio
+
+Personal portfolio built with Astro, TailwindCSS, and React, focused on Cybersecurity, Threat Hunting, Detection Engineering, DFIR, Incident Response, and Cloud Security.
+
+This site serves as a professional presentation of my technical profile, experience, projects, education, and contact channels.
 
 ---
 
-[Demo](https://oscarhernandez.vercel.app/)
+## Professional Focus
 
-[Astro Themes](https://astro.build/themes/details/dark-minimal/)
+This portfolio is oriented toward showcasing my transition and specialization in:
 
-[ReactBits Showcase](https://www.reactbits.dev/showcase) 
+- Threat Hunting
+- Detection Engineering
+- DFIR
+- Incident Response
+- Cloud Security
+- SOC Operations
+- Cybersecurity labs
+- Reproducible technical documentation
 
-The component `<LetterGlitch \>` was taken from [ReactBits.dev](https://www.reactbits.dev/)
+---
 
-## **Stack**  
-### **Frontend**  
-![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+## Site Sections
 
-### **Tools**  
-![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black)
-![Canva](https://img.shields.io/badge/Canva-c900c3?logo=canva&logoColor=white)
+- Home
+- Projects
+- Experience
+- Education
+- Contact
 
-### **Show your favorite Spotify album (or your own)** ![Spotify](https://img.shields.io/badge/Spotify-06cc1a?logo=spotify&logoColor=white)
-1. Choose your Spotify album
-2. Access the share options
-3. Select 'copy embed code'
-```
-<iframe src="https://open.spotify.com/embed/album/YOUR_ALBUM_ID_HERE" style="border-radius:12px border:0;" class="w-full h-40" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-```
-4. Insert the embed code on footer.astro
+---
 
-That's it!
+## Featured Projects
 
-## **Project structure**
-```
+This portfolio links to public technical repositories related to cybersecurity, documentation, labs, and security analysis.
+
+### cyber-threat-hunting
+
+Structured Threat Hunting knowledge base and lab focused on hypothesis-driven investigations, MITRE ATT&CK, and Cyber Kill Chain.
+
+Repository:  
+https://github.com/beathunterzero/cyber-threat-hunting
+
+### cyber-threat-hunting-lab-logs
+
+Lab repository with controlled logs, PCAP files, queries, analyst notes, and technical evidence to reproduce Threat Hunting investigations.
+
+Repository:  
+https://github.com/beathunterzero/cyber-threat-hunting-lab-logs
+
+### elastic-security-lab
+
+Practical Elastic Security lab for log ingestion, telemetry analysis, Kibana visualization, and search development oriented toward Threat Hunting and Detection Engineering.
+
+Repository:  
+https://github.com/beathunterzero/elastic-security-lab
+
+### engineering-knowledge-base
+
+Technical knowledge base about tools, automation, and working environment configuration using PowerShell, Git, WSL, Python, and Docker.
+
+Repository:  
+https://github.com/beathunterzero/engineering-knowledge-base
+
+---
+
+## Portfolio Tech Stack
+
+- Astro
+- TailwindCSS
+- React
+- TypeScript
+- GitHub Pages
+- GitHub Actions
+
+---
+
+## Project Structure
+
+```text
 public/
+├── docs/
+├── fonts/
 └── svg/
+
 src/
-├── Components/
-|    ├── contact.astro
-|    ├── footer.astro
-|    ├── home.astro
-|    ├── logoWall.astro
-|    ├── nav.astro
-|    └── projects.astro
+├── components/
+│   ├── contact.astro
+│   ├── education.astro
+│   ├── experience.astro
+│   ├── footer.astro
+│   ├── home.astro
+│   ├── logoWall.astro
+│   ├── nav.astro
+│   └── projects.astro
 ├── layouts/
-|    └── Layout.astro
+│   └── Layout.astro
 ├── React/
-|    ├── LetterGlitch.tsx
-|    ├── LikeButton.tsx
-|    └── SkillsList.tsx
+│   ├── LetterGlitch.tsx
+│   └── SkillsList.tsx
 └── pages/
-     └── index.astro
+    └── index.astro
+````
+
+---
+
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/beathunterzero/beathunterzero.github.io.git
 ```
 
-## **Local configuration** 
-1. Clone the repo:  
+Enter the project directory:
+
+```bash
+cd beathunterzero.github.io
 ```
-git clone https://github.com/Gothsec/Astro-portfolio
-```
-2. Install dependencies:
-```  
+
+Install dependencies:
+
+```bash
 npm install
 ```
-3. Start the development server:
-```  
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-> **Important Notice:**  
-> This project is licensed under the [MIT License](https://opensource.org/licenses/mit).  
-> According to the license terms, any redistribution (including compiled or modified versions), you **must** retain the original copyright 
-> notice and the full license text. Copyright © 2026 Oscar Hernandez. All rights reserved.
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## Deployment
+
+This site is prepared to be deployed on GitHub Pages through GitHub Actions.
+
+Site URL:
+
+[https://beathunterzero.github.io](https://beathunterzero.github.io)
+
+---
+
+## Credits
+
+This portfolio is based on an original template created by Oscar Hernandez / Gothsec.
+
+Original author:
+
+[https://github.com/Gothsec](https://github.com/Gothsec)
+
+The template was modified and adapted to build Rhodyn Ildefonso’s personal portfolio, including changes to content, structure, sections, styling, professional focus, projects, experience, education, and deployment.
+
+The `LetterGlitch` component is based on a component from ReactBits.
+
+Reference:
+
+[https://www.reactbits.dev/](https://www.reactbits.dev/)
+
+---
+
+## License
+
+This project preserves the MIT License from the original template.
+
+Original template:
+
+Copyright (c) 2025 Oscar Hernandez
+
+Modifications, portfolio content, professional structure, and adaptation:
+
+Copyright (c) 2026 Rhodyn Ildefonso
+
+See the `LICENSE` file for more details.
+
+```
+```
