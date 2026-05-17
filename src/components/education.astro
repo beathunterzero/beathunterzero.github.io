@@ -1,0 +1,258 @@
+---
+interface EducationItem {
+  title: string;
+  institution?: string;
+  date: string;
+  description?: string;
+}
+
+interface EducationSection {
+  title: string;
+  items: EducationItem[];
+}
+
+const educationSections: EducationSection[] = [
+  {
+    title: "Estudios formales",
+    items: [
+      {
+        title: "Bachiller en Ingeniería Informática",
+        institution: "Universidad Nacional José Faustino Sánchez Carrión",
+        date: "Mar 2022 - Feb 2023",
+        description:
+          "Formación universitaria orientada a ingeniería, tecnologías de la información, sistemas y fundamentos técnicos aplicados.",
+      },
+      {
+        title: "Egresado en Ingeniería Informática",
+        institution: "Universidad Nacional José Faustino Sánchez Carrión",
+        date: "Abr 2016 - Dic 2021",
+        description:
+          "Culminación del plan académico de Ingeniería Informática con base en sistemas, programación, infraestructura y análisis técnico.",
+      },
+    ],
+  },
+  {
+    title: "Certificaciones",
+    items: [
+      {
+        title: "Microsoft SC-200: Security Operations Analyst",
+        institution: "Microsoft",
+        date: "2023",
+        description:
+          "Certificación orientada a operaciones de seguridad, Microsoft Sentinel, Microsoft Defender y análisis de amenazas.",
+      },
+      {
+        title:
+          "Microsoft SC-900: Security, Compliance, and Identity Fundamentals",
+        institution: "Microsoft",
+        date: "2022",
+        description:
+          "Fundamentos de seguridad, cumplimiento, identidad y servicios de seguridad dentro del ecosistema Microsoft.",
+      },
+    ],
+  },
+  {
+    title: "Estudios complementarios",
+    items: [
+      {
+        title: "TryHackMe Roadmap: Security Engineer",
+        institution: "TryHackMe",
+        date: "2025",
+        description:
+          "Ruta práctica orientada a fundamentos de ingeniería de seguridad, análisis técnico y operaciones defensivas.",
+      },
+      {
+        title: "TryHackMe Roadmap: Security Analyst",
+        institution: "TryHackMe",
+        date: "2025",
+        description:
+          "Ruta práctica enfocada en análisis de seguridad, investigación de eventos, fundamentos SOC y respuesta inicial.",
+      },
+      {
+        title: "TryHackMe Roadmap: Cyber Security Foundations",
+        institution: "TryHackMe",
+        date: "2025",
+        description:
+          "Formación complementaria en fundamentos de ciberseguridad, amenazas, controles defensivos y conceptos operativos.",
+      },
+      {
+        title: "TryHackMe Roadmap: Computer Science Basics",
+        institution: "TryHackMe",
+        date: "2025",
+        description:
+          "Ruta base de fundamentos de ciencias de la computación aplicados al aprendizaje técnico en ciberseguridad.",
+      },
+    ],
+  },
+  {
+    title: "Próximas certificaciones",
+    items: [
+      {
+        title: "eCTHP: eLearnSecurity Certified Threat Hunting Professional",
+        institution: "INE / eLearnSecurity",
+        date: "Planificada",
+        description:
+          "Certificación enfocada en Threat Hunting, análisis de amenazas, investigación basada en hipótesis y detección.",
+      },
+      {
+        title: "eCIR: eLearnSecurity Certified Incident Responder",
+        institution: "INE / eLearnSecurity",
+        date: "Planificada",
+        description:
+          "Certificación orientada a respuesta a incidentes, análisis técnico, investigación y procedimientos DFIR.",
+      },
+    ],
+  },
+];
+---
+
+<section
+  id="education"
+  class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
+>
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">
+      Formación profesional
+    </h2>
+
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Educación</h3>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div class="space-y-4">
+        {
+          educationSections.map((section, index) => (
+            <details
+              class="group rounded-2xl border border-[var(--white-icon-tr)] bg-[#1414149c] overflow-hidden"
+              open={index === 0}
+            >
+              <summary class="flex items-center justify-between gap-4 p-4 cursor-pointer list-none">
+                <div class="flex items-center gap-3">
+                  <span class="flex items-center justify-center w-8 h-8 rounded-xl border border-[var(--white-icon-tr)] text-[var(--sec)] bg-[#101010]">
+                    {index + 1}
+                  </span>
+
+                  <span class="text-lg font-medium text-[var(--white)]">
+                    {section.title}
+                  </span>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6 text-[var(--white)] transition-transform duration-300 group-open:rotate-180"
+                >
+                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z" />
+                </svg>
+              </summary>
+
+              <div class="px-4 pb-4">
+                <div class="space-y-4 border-t border-[var(--white-icon-tr)] pt-4">
+                  {section.items.map((item) => (
+                    <article class="rounded-xl bg-[#101010] border border-[var(--white-icon-tr)] p-4">
+                      <div class="mb-2">
+                        <h4 class="text-[var(--white)] font-medium">
+                          {item.title}
+                        </h4>
+                        {item.institution && (
+                          <p class="text-sm text-[var(--white-icon)] mt-1">
+                            {item.institution}
+                          </p>
+                        )}
+
+                        {section.title === "Estudios formales" ? (
+                          <p class="text-xs text-[var(--sec)] mt-2">
+                            {item.date}
+                          </p>
+                        ) : (
+                          <span class="inline-flex text-xs text-[var(--sec)] border border-[var(--white-icon-tr)] rounded-full px-3 py-1 mt-2">
+                            {item.date}
+                          </span>
+                        )}
+                      </div>
+
+                      {item.description && (
+                        <p class="text-sm leading-relaxed text-[var(--white-icon)]">
+                          {item.description}
+                        </p>
+                      )}
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </details>
+          ))
+        }
+      </div>
+
+      <aside
+        class="rounded-2xl border border-[var(--white-icon-tr)] bg-[#1414149c] p-6"
+      >
+        <span
+          class="inline-flex items-center rounded-full border border-[var(--white-icon-tr)] px-3 py-1 text-xs text-[var(--sec)] mb-4"
+        >
+          Ruta de aprendizaje
+        </span>
+
+        <h4 class="text-3xl md:text-4xl font-semibold mb-4 shiny-sec">
+          Enfoque profesional
+        </h4>
+
+        <p class="text-sm leading-relaxed text-[var(--white-icon)] mb-6">
+          Formación orientada a operaciones defensivas, investigación de
+          amenazas, ingeniería de detección, respuesta a incidentes y seguridad
+          cloud.
+        </p>
+
+        <div class="space-y-4">
+          {
+            [
+              "Threat Hunting",
+              "Detection Engineering",
+              "DFIR",
+              "Incident Response",
+              "Cloud Security",
+            ].map((item, index) => (
+              <div class="flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--sec)] text-[var(--background)] text-sm font-semibold">
+                  {index + 1}
+                </span>
+
+                <div class="flex-1">
+                  <div class="h-px bg-[var(--white-icon-tr)] mb-2" />
+                  <span class="text-sm text-[var(--white)]">{item}</span>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <div class="mt-8 pt-6 border-t border-[var(--white-icon-tr)]">
+          <h5 class="text-2xl md:text-3xl font-semibold mb-4 shiny-sec">
+            Objetivo actual
+          </h5>
+
+          <p class="text-sm leading-relaxed text-[var(--white-icon)]">
+            Consolidar un perfil técnico orientado a Threat Hunting, Ingeniería
+            de Detección y DFIR, integrando experiencia en operaciones SOC,
+            respuesta a incidentes y seguridad cloud.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  const educationDetails = document.querySelectorAll("#education details");
+
+  educationDetails.forEach((detail) => {
+    detail.addEventListener("toggle", () => {
+      if (detail.open) {
+        educationDetails.forEach((otherDetail) => {
+          if (otherDetail !== detail) {
+            otherDetail.removeAttribute("open");
+          }
+        });
+      }
+    });
+  });
+</script>
