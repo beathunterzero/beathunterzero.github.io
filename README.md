@@ -1,6 +1,3 @@
-Claro. Aquí tienes el README en inglés, adaptado a tu portafolio y manteniendo créditos/licencia de forma limpia:
-
-````md
 # Rhodyn Ildefonso Portfolio
 
 Personal portfolio built with Astro, TailwindCSS, and React, focused on Cybersecurity, Threat Hunting, Detection Engineering, DFIR, Incident Response, and Cloud Security.
@@ -189,6 +186,3 @@ Modifications, portfolio content, professional structure, and adaptation:
 Copyright (c) 2026 Rhodyn Ildefonso
 
 See the `LICENSE` file for more details.
-
-```
-```
