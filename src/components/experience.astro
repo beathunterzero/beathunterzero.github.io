@@ -1,0 +1,298 @@
+---
+interface ExperienceItem {
+  role: string;
+  company: string;
+  client?: string;
+  type?: string;
+  date: string;
+  location: string;
+  description: string;
+  highlights: string[];
+  tags: string[];
+}
+
+const experiences: ExperienceItem[] = [
+  {
+    role: "Threat Hunting & Detection Engineering Practitioner",
+    company: "Independiente / Portafolio técnico",
+    type: "Autónomo",
+    date: "Ene 2026 - Actualidad",
+    location: "Huaral, Lima, Perú",
+    description:
+      "Desarrollo independiente de un portafolio técnico orientado a Threat Hunting, Detection Engineering, SOC Operations y DFIR, con foco en investigaciones reproducibles, análisis de logs, documentación estructurada y laboratorios prácticos de seguridad.",
+    highlights: [
+      "Desarrollo de hipótesis de Threat Hunting utilizando MITRE ATT&CK y Cyber Kill Chain.",
+      "Construcción de laboratorios con Elastic Security, Elasticsearch, Kibana, Filebeat, Docker, Docker Compose y WSL.",
+      "Documentación de consultas KQL, análisis de logs, evidencia técnica, IoCs, artefactos observables y procedimientos reproducibles.",
+      "Práctica continua de DFIR y análisis de endpoints con Velociraptor, Sysmon, Wireshark y artefactos Windows/Linux.",
+    ],
+    tags: [
+      "Threat Hunting",
+      "Detection Engineering",
+      "DFIR",
+      "Elastic Security",
+      "KQL",
+      "Velociraptor",
+    ],
+  },
+  {
+    role: "IR Engineer - Cloud Security",
+    company: "Baufest",
+    client: "Cencosud Supermercados S.A.",
+    type: "Jornada completa",
+    date: "Ene 2023 - Jun 2025",
+    location: "Remoto / Santiago, Chile",
+    description:
+      "Participación en operaciones de respuesta a incidentes en entornos multicloud, incluyendo Azure, AWS y OCI, con actividades de detección, triage, investigación, escalamiento, mitigación y documentación operativa.",
+    highlights: [
+      "Gestión de incidentes cloud, triage avanzado, análisis de eventos, escalamiento operativo y documentación técnica.",
+      "Investigación y correlación de eventos con Microsoft Sentinel, KQL, Microsoft Defender, Defender for Cloud, AWS GuardDuty, AWS Detective y AWS CloudTrail.",
+      "Análisis de IoCs, comportamientos anómalos, patrones de ataque, eventos cloud y hallazgos de seguridad.",
+      "Validación y ajuste operativo de alertas para reducir falsos positivos y mejorar flujos SOC / Cloud Security.",
+      "Trabajo coordinado con equipos de Seguridad, IaaS, Desarrollo, Redes, IAM y Arquitectura.",
+    ],
+    tags: [
+      "Incident Response",
+      "Cloud Security",
+      "Microsoft Sentinel",
+      "KQL",
+      "AWS GuardDuty",
+      "Defender for Cloud",
+    ],
+  },
+  {
+    role: "Operations Specialist - Cybersecurity",
+    company: "Baufest",
+    type: "Jornada completa",
+    date: "Oct 2022 - Jun 2025",
+    location: "Miraflores, Lima, Perú",
+    description:
+      "Rol inicial y posteriormente complementario orientado a Secure SDLC, pruebas de seguridad de aplicaciones, análisis de vulnerabilidades y hardening Linux, con participación puntual en proyectos de AppSec y pentesting.",
+    highlights: [
+      "Ejecución de pruebas de seguridad en aplicaciones y servicios utilizando OWASP ZAP, Burp Suite y Nessus.",
+      "Identificación, validación y documentación de vulnerabilidades alineadas al OWASP Top Ten y buenas prácticas de Secure SDLC.",
+      "Apoyo en análisis de hardening y revisión de configuraciones de seguridad en sistemas Linux.",
+      "Elaboración de reportes técnicos y ejecutivos para comunicar hallazgos, riesgos, impacto y recomendaciones de remediación.",
+    ],
+    tags: [
+      "AppSec",
+      "Vulnerability Assessment",
+      "OWASP",
+      "Burp Suite",
+      "Nessus",
+      "Linux Hardening",
+    ],
+  },
+  {
+    role: "PEI DevSecOps / Cloud Security",
+    company: "Baufest",
+    type: "Contrato de formación",
+    date: "May 2022 - Oct 2022",
+    location: "Miraflores, Lima, Perú",
+    description:
+      "Participación en programa de formación orientado al desarrollo de competencias técnicas en DevSecOps, Cloud Security, automatización, operación segura y trabajo colaborativo en entornos tecnológicos.",
+    highlights: [
+      "Formación práctica en fundamentos de DevSecOps, Cloud Security, automatización y operación segura.",
+      "Desarrollo de primeras automatizaciones con Bash y Python.",
+      "Introducción a documentación técnica, mejora continua, control de cambios y colaboración con equipos técnicos.",
+      "Fortalecimiento de bases técnicas en Linux, scripting, seguridad aplicada y flujos de trabajo orientados a servicios tecnológicos.",
+    ],
+    tags: [
+      "DevSecOps",
+      "Cloud Security",
+      "Python",
+      "Linux",
+      "Automation",
+    ],
+  },
+];
+---
+
+<section
+  id="experience"
+  class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
+>
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">
+      Trayectoria profesional
+    </h2>
+
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">
+      Experiencia
+    </h3>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div class="space-y-4">
+        {
+          experiences.map((experience, index) => (
+            <details
+              class="group rounded-2xl border border-[var(--white-icon-tr)] bg-[#1414149c] overflow-hidden"
+              open={index === 0}
+            >
+              <summary class="flex items-center justify-between gap-4 p-4 cursor-pointer list-none">
+                <div class="flex items-center gap-3 min-w-0">
+                  <span class="flex items-center justify-center w-8 h-8 rounded-xl border border-[var(--white-icon-tr)] text-[var(--sec)] bg-[#101010] shrink-0">
+                    {index + 1}
+                  </span>
+
+                  <div class="min-w-0">
+                    <span class="block text-lg font-medium text-[var(--white)] truncate">
+                      {experience.role}
+                    </span>
+
+                    <span class="block text-sm text-[var(--white-icon)] truncate">
+                      {experience.company}
+                    </span>
+                  </div>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6 text-[var(--white)] transition-transform duration-300 group-open:rotate-180 shrink-0"
+                >
+                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z" />
+                </svg>
+              </summary>
+
+              <div class="px-4 pb-4">
+                <article class="border-t border-[var(--white-icon-tr)] pt-4">
+                  <div class="mb-4">
+                    <h4 class="text-xl font-semibold text-[var(--white)]">
+                      {experience.role}
+                    </h4>
+
+                    <p class="text-sm text-[var(--white-icon)] mt-1">
+                      {experience.company}
+                      {experience.client && (
+                        <span> / {experience.client}</span>
+                      )}
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-3">
+                      <span class="text-xs text-[var(--sec)] border border-[var(--white-icon-tr)] rounded-full px-3 py-1">
+                        {experience.date}
+                      </span>
+
+                      <span class="text-xs text-[var(--white-icon)] border border-[var(--white-icon-tr)] rounded-full px-3 py-1">
+                        {experience.location}
+                      </span>
+
+                      {experience.type && (
+                        <span class="text-xs text-[var(--white-icon)] border border-[var(--white-icon-tr)] rounded-full px-3 py-1">
+                          {experience.type}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <p class="text-sm leading-relaxed text-[var(--white-icon)] mb-4">
+                    {experience.description}
+                  </p>
+
+                  <ul class="space-y-2 text-sm text-[var(--white-icon)] mb-5">
+                    {
+                      experience.highlights.map((highlight) => (
+                        <li class="flex items-start gap-3">
+                          <span class="text-[var(--sec)] mt-0.5">•</span>
+                          <span>{highlight}</span>
+                        </li>
+                      ))
+                    }
+                  </ul>
+
+                  <div class="flex flex-wrap gap-2">
+                    {
+                      experience.tags.map((tag) => (
+                        <span class="rounded-full border border-[var(--white-icon-tr)] px-3 py-1 text-xs text-[var(--white-icon)]">
+                          {tag}
+                        </span>
+                      ))
+                    }
+                  </div>
+                </article>
+              </div>
+            </details>
+          ))
+        }
+      </div>
+
+      <aside class="rounded-2xl border border-[var(--white-icon-tr)] bg-[#1414149c] p-6">
+        <span class="inline-flex items-center rounded-full border border-[var(--white-icon-tr)] px-3 py-1 text-xs text-[var(--sec)] mb-4">
+          Resumen profesional
+        </span>
+
+        <h4 class="text-3xl md:text-4xl font-semibold mb-4 shiny-sec">
+          Operaciones defensivas, cloud e investigación
+        </h4>
+
+        <p class="text-base leading-relaxed text-[var(--white-icon)] mb-6">
+          Experiencia en respuesta a incidentes cloud, análisis de eventos,
+          operaciones SOC, AppSec y construcción de laboratorios técnicos para
+          Threat Hunting y Detection Engineering.
+        </p>
+
+        <div class="grid grid-cols-1 gap-4">
+          {
+            [
+              {
+                value: "+3 años",
+                label: "Experiencia en ciberseguridad",
+              },
+              {
+                value: "Multicloud",
+                label: "Azure, AWS y OCI",
+              },
+              {
+                value: "SOC / IR",
+                label: "Triage, investigación y respuesta",
+              },
+              {
+                value: "Portfolio",
+                label: "Laboratorios y repositorios técnicos",
+              },
+            ].map((item) => (
+              <div class="rounded-xl border border-[var(--white-icon-tr)] bg-[#101010] p-4">
+                <span class="block text-2xl font-semibold shiny-sec">
+                  {item.value}
+                </span>
+                <span class="block text-sm text-[var(--white-icon)] mt-1">
+                  {item.label}
+                </span>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-[var(--white-icon-tr)]">
+          <h5 class="text-2xl md:text-3xl font-semibold mb-4 shiny-sec">
+            Enfoque actual
+          </h5>
+
+          <p class="text-base leading-relaxed text-[var(--white-icon)]">
+            Consolidar experiencia previa en Cloud Incident Response y operaciones
+            de seguridad hacia Threat Hunting, Ingeniería de Detección, DFIR y
+            análisis técnico de telemetría.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const experienceDetails = document.querySelectorAll("#experience details");
+
+  experienceDetails.forEach((detail) => {
+    detail.addEventListener("toggle", () => {
+      if (detail.open) {
+        experienceDetails.forEach((otherDetail) => {
+          if (otherDetail !== detail) {
+            otherDetail.removeAttribute("open");
+          }
+        });
+      }
+    });
+  });
+</script>
