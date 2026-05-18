@@ -1,5 +1,6 @@
 ---
 const technologies = [
+  // Threat Hunting & Detection Engineering
   {
     name: "Elastic Security",
     icon: "elastic-security",
@@ -9,12 +10,24 @@ const technologies = [
     icon: "kibana",
   },
   {
-    name: "Wireshark",
-    icon: "wireshark",
+    name: "Kusto Query Language",
+    icon: "kql",
+  },
+  {
+    name: "Microsoft Sentinel",
+    icon: "microsoft-sentinel",
+  },
+  {
+    name: "Sysmon",
+    icon: "sysmon",
   },
   {
     name: "Velociraptor",
     icon: "velociraptor",
+  },
+  {
+    name: "Wireshark",
+    icon: "wireshark",
   },
   {
     name: "MITRE ATT&CK",
@@ -22,112 +35,36 @@ const technologies = [
   },
   {
     name: "Cyber Kill Chain",
-    icon: "Cyber Kill Chain",
+    icon: "cyber-kill-chain",
   },
+
+  // Automation, scripting & labs
   {
-    name: "Bash",
-    icon: "bash",
-  },
-  {
-    name: "Git",
-    icon: "git",
-  },
-  {
-    name: "Windows Subsystem for Linux",
-    icon: "wsl",
+    name: "Python",
+    icon: "python",
   },
   {
     name: "PowerShell",
     icon: "powershell",
   },
   {
-    name: "Sysmon",
-    icon: "sysmon",
-  },
-  {
-    name: "Python",
-    icon: "python",
-  },
-  {
     name: "Docker",
     icon: "docker",
   },
   {
-    name: "Ubuntu",
-    icon: "ubuntu",
+    name: "Windows Subsystem for Linux",
+    icon: "wsl",
   },
   {
-    name: "Debian",
-    icon: "debian",
+    name: "Git",
+    icon: "git",
   },
   {
-    name: "Fedora",
-    icon: "fedora",
+    name: "Kali Purple",
+    icon: "kali-purple",
   },
-  {
-    name: "Azure Sentinel",
-    icon: "azure-sentinel",
-  },
-  {
-    name: "Azure Security Center",
-    icon: "azure-security",
-  },
-  {
-    name: "Kusto Query Language",
-    icon: "kql",
-  },
-  {
-    name: "Microsoft Defender for Cloud",
-    icon: "microsoft-defender-for-cloud",
-  },
-  {
-    name: "Entra ID Protection",
-    icon: "entra-id-protection",
-  },
-  {
-    name: "AWS GuardDuty",
-    icon: "GuardDuty",
-  },
-  {
-    name: "AWS Detective",
-    icon: "Detective",
-  },
-  {
-    name: "AWS CloudTrail",
-    icon: "CloudTrail",
-  },
-  {
-    name: "AWS Security Hub",
-    icon: "Security Hub",
-  },
-  {
-    name: "AWS VPC",
-    icon: "VPC",
-  },
-  {
-    name: "AWS EC2",
-    icon: "EC2",
-  },
-  {
-    name: "AWS S3",
-    icon: "S3",
-  },
-  {
-    name: "Check Point CloudGuard",
-    icon: "checkpoint-cloudguard",
-  },
-  {
-    name: "Oracle CloudGuard",
-    icon: "oracle",
-  },
-  {
-    name: "Obsidian",
-    icon: "Obsidian",
-  },
-  {
-    name: "Visual Studio Code",
-    icon: "vscode",
-  },
+
+  // Threat Intelligence & enrichment
   {
     name: "VirusTotal",
     icon: "virustotal",
@@ -140,18 +77,90 @@ const technologies = [
     name: "IBM X-Force Exchange",
     icon: "ibm-xforce",
   },
+
+  // Cloud Security
   {
-    name: "Kali Purple",
-    icon: "kali-purple",
+    name: "Microsoft Defender for Cloud",
+    icon: "microsoft-defender-for-cloud",
   },
   {
-    name: "OWASP ZAP",
-    icon: "zap",
+    name: "AWS GuardDuty",
+    icon: "aws-guardduty",
   },
   {
-    name: "Burpsuite",
-    icon: "burpsuite",
+    name: "AWS Detective",
+    icon: "aws-detective",
   },
+  {
+    name: "AWS CloudTrail",
+    icon: "aws-cloudtrail",
+  },
+  {
+    name: "Check Point CloudGuard",
+    icon: "checkpoint-cloudguard",
+  },
+
+  // Herramientas comentadas para posible uso futuro
+  // {
+  //   name: "Bash",
+  //   icon: "bash",
+  // },
+  // {
+  //   name: "Ubuntu",
+  //   icon: "ubuntu",
+  // },
+  // {
+  //   name: "Debian",
+  //   icon: "debian",
+  // },
+  // {
+  //   name: "Fedora",
+  //   icon: "fedora",
+  // },
+  // {
+  //   name: "Azure Security Center",
+  //   icon: "azure-security-center",
+  // },
+  // {
+  //   name: "Entra ID Protection",
+  //   icon: "entra-id-protection",
+  // },
+  // {
+  //   name: "AWS Security Hub",
+  //   icon: "aws-security-hub",
+  // },
+  // {
+  //   name: "AWS VPC",
+  //   icon: "aws-vpc",
+  // },
+  // {
+  //   name: "AWS EC2",
+  //   icon: "aws-ec2",
+  // },
+  // {
+  //   name: "AWS S3",
+  //   icon: "aws-s3",
+  // },
+  // {
+  //   name: "Oracle CloudGuard",
+  //   icon: "oracle-cloudguard",
+  // },
+  // {
+  //   name: "Obsidian",
+  //   icon: "obsidian",
+  // },
+  // {
+  //   name: "Visual Studio Code",
+  //   icon: "visual-studio-code",
+  // },
+  // {
+  //   name: "OWASP ZAP",
+  //   icon: "owasp-zap",
+  // },
+  // {
+  //   name: "Burp Suite",
+  //   icon: "burp-suite",
+  // },
 ];
 
 const duplicatedTechnologies = [...technologies, ...technologies];
