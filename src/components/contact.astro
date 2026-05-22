@@ -1,21 +1,21 @@
 <section id="contact" class="w-full py-12 border-t border-[#ffffff10]">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Hablemos</h2>
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Let's Talk</h2>
     <h3 class="text-4xl md:text-5xl font-medium text-[var(--white)] mb-6">
-      Contacto
+      Contact
     </h3>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="text-[var(--white-icon)]">
         <p class="mb-4">
-          Si deseas contactarme por oportunidades laborales, proyectos de
-          Ciberseguridad, colaboración técnica o solicitar mi CV actualizado,
-          puedes escribirme mediante este formulario.
+          If you would like to contact me regarding job opportunities,
+          cybersecurity projects, technical collaboration, or to request my
+          updated CV, you can reach me through this form.
         </p>
 
         <div class="flex items-center gap-2">
-          <span>Ubicación:</span>
-          <span class="text-[var(--white)]">Huaral, Lima, Perú</span>
+          <span>Location:</span>
+          <span class="text-[var(--white)]">Huaral, Lima, Peru</span>
         </div>
 
         <div class="flex items-center gap-5 mt-6">
@@ -57,7 +57,7 @@
           <input
             type="text"
             name="from_name"
-            placeholder="Nombre"
+            placeholder="Name"
             required
             class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)]"
           />
@@ -65,14 +65,14 @@
           <input
             type="email"
             name="reply_to"
-            placeholder="Correo electrónico"
+            placeholder="Email address"
             required
             class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)]"
           />
 
           <textarea
             name="message"
-            placeholder="Mensaje"
+            placeholder="Message"
             rows="6"
             required
             class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)] resize-none"
@@ -82,7 +82,7 @@
             type="submit"
             class="px-4 py-2 bg-[var(--white-icon-tr)] text-[var(--white)] rounded-lg opacity-60 transition-opacity border border-[var(--white-icon-tr)] hover:opacity-100 hover:bg-[var(--white-icon-tr)]"
           >
-            Enviar
+            Send
           </button>
         </form>
 
@@ -90,7 +90,7 @@
           id="form-message"
           class="hidden justify-center items-center mt-4 text-[var(--white)] text-lg"
         >
-          ✅ Gracias por tu mensaje.
+          ✅ Thank you for your message.
         </div>
       </div>
     </div>
@@ -120,11 +120,11 @@
       } else {
         const data = await response.json();
         console.error("Error response:", data);
-        alert("Hubo un problema al enviar tu mensaje.");
+        alert("There was a problem sending your message.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Hubo un problema al enviar tu mensaje.");
+      alert("There was a problem sending your message.");
     }
   });
 </script>

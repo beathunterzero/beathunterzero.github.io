@@ -100,7 +100,7 @@ const technologies = [
     icon: "checkpoint-cloudguard",
   },
 
-  // Herramientas comentadas para posible uso futuro
+  // Commented tools for possible future use
   // {
   //   name: "Bash",
   //   icon: "bash",
@@ -166,17 +166,17 @@ const technologies = [
 const duplicatedTechnologies = [...technologies, ...technologies];
 ---
 
-<section class="relative py-8" aria-label="Tecnologías y herramientas">
+<section class="relative py-8" aria-label="Technologies and tools">
   <div class="flex items-center justify-between gap-4 mb-4">
     <h3 class="text-[var(--white)] text-xl md:text-2xl font-medium">
-      Tecnologías y herramientas
+      Technologies and tools
     </h3>
 
     <div class="flex items-center gap-2">
       <button
         type="button"
         id="logo-prev"
-        aria-label="Retroceder tecnologías"
+        aria-label="Previous technologies"
         class="flex items-center justify-center w-9 h-9 rounded-xl border border-[var(--white-icon-tr)] bg-[#1414149c] text-[var(--white-icon)] hover:text-[var(--white)] hover:bg-[var(--white-icon-tr)] transition duration-300"
       >
         ‹
@@ -185,7 +185,7 @@ const duplicatedTechnologies = [...technologies, ...technologies];
       <button
         type="button"
         id="logo-toggle"
-        aria-label="Pausar carrusel"
+        aria-label="Pause carousel"
         class="flex items-center justify-center w-9 h-9 rounded-xl border border-[var(--white-icon-tr)] bg-[#1414149c] text-[var(--white-icon)] hover:text-[var(--white)] hover:bg-[var(--white-icon-tr)] transition duration-300"
       >
         ❚❚
@@ -194,7 +194,7 @@ const duplicatedTechnologies = [...technologies, ...technologies];
       <button
         type="button"
         id="logo-next"
-        aria-label="Adelantar tecnologías"
+        aria-label="Next technologies"
         class="flex items-center justify-center w-9 h-9 rounded-xl border border-[var(--white-icon-tr)] bg-[#1414149c] text-[var(--white-icon)] hover:text-[var(--white)] hover:bg-[var(--white-icon-tr)] transition duration-300"
       >
         ›
@@ -297,13 +297,13 @@ const duplicatedTechnologies = [...technologies, ...technologies];
   function pauseCarousel() {
     isPaused = true;
     toggleButton.textContent = "▶";
-    toggleButton.setAttribute("aria-label", "Reanudar carrusel");
+    toggleButton.setAttribute("aria-label", "Resume carousel");
   }
 
   function resumeCarousel() {
     isPaused = false;
     toggleButton.textContent = "❚❚";
-    toggleButton.setAttribute("aria-label", "Pausar carrusel");
+    toggleButton.setAttribute("aria-label", "Pause carousel");
   }
 
   prevButton?.addEventListener("click", () => {

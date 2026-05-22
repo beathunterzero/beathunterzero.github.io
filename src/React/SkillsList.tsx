@@ -62,29 +62,29 @@ const SkillsList = () => {
 
   const skills: Record<string, string[]> = {
     "Threat Hunting": [
-      "Investigaciones basadas en hipótesis.",
-      "Análisis de telemetría y comportamiento adversario.",
-      "Mapeo técnico con MITRE ATT&CK y Cyber Kill Chain.",
+      "Hypothesis-based investigations.",
+      "Telemetry and adversary behavior analysis.",
+      "Technical mapping with MITRE ATT&CK and Cyber Kill Chain.",
     ],
     "Detection Engineering": [
-      "Diseño de lógica de detección orientada a comportamiento.",
-      "Construcción y validación de consultas KQL.",
-      "Correlación de eventos en SIEM y fuentes de telemetría.",
+      "Design of behavior-oriented detection logic.",
+      "Construction and validation of KQL queries.",
+      "Event correlation across SIEM and telemetry sources.",
     ],
     "DFIR & Incident Response": [
-      "Análisis de eventos Windows, Linux y actividad de endpoints.",
-      "Apoyo técnico a triage, investigación y respuesta a incidentes.",
-      "Revisión de artefactos con Sysmon, Velociraptor y logs de seguridad.",
+      "Analysis of Windows, Linux, and endpoint activity events.",
+      "Technical support for triage, investigation, and incident response.",
+      "Artifact review with Sysmon, Velociraptor, and security logs.",
     ],
     "Cloud Security": [
-      "Análisis de actividad en entornos Azure y AWS.",
-      "Revisión de eventos de identidad, acceso y actividad cloud.",
-      "Complemento técnico para operaciones SOC e IR multi-cloud.",
+      "Activity analysis in Azure and AWS environments.",
+      "Review of identity, access, and cloud activity events.",
+      "Technical support for multi-cloud SOC and IR operations.",
     ],
     "Security Labs & Engineering": [
-      "Construcción de laboratorios reproducibles de seguridad.",
-      "Automatización y scripting con Python, Docker, Linux y WSL.",
-      "Documentación técnica de investigaciones, detecciones y procedimientos.",
+      "Construction of reproducible security labs.",
+      "Automation and scripting with Python, Docker, Linux, and WSL.",
+      "Technical documentation of investigations, detections, and procedures.",
     ],
   };
 
@@ -95,7 +95,7 @@ const SkillsList = () => {
   return (
     <div className="text-left pt-3 md:pt-9">
       <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
-        ¿Qué hago?
+        What do I do?
       </h3>
 
       <ul className="space-y-4 mt-4 text-lg">
